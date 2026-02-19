@@ -3,6 +3,7 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+ @import "tailwindcss";
 
 :root {
 	--accent: #2337ff;
@@ -40,7 +41,7 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.7;
 }
 main {
@@ -60,18 +61,23 @@ h6 {
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	margin-top: 1.5rem;
+	font-size: 2.5em;
 }
 h2 {
-	font-size: 2.441em;
+	margin-top: 1.35rem;
+	font-size: 2em;
 }
 h3 {
-	font-size: 1.953em;
+	margin-top: 1.15rem;
+	font-size: 1.853em;
 }
 h4 {
-	font-size: 1.563em;
+	margin-top: 0.75rem;
+	font-size: 1.463em;
 }
 h5 {
+	margin-top: 0.75rem;
 	font-size: 1.25em;
 }
 strong,
@@ -88,7 +94,21 @@ p {
 	margin-bottom: 1em;
 }
 .prose p {
-	margin-bottom: 2em;
+	margin-bottom: 0.5em;
+}
+.prose ul {
+	padding-inline-start: 40px;
+	margin-block: 1em;
+}
+.prose ul li::before {
+	content: "⭐";
+	/* podés poner cualquier emoji: ✨ 💥 ✅ etc */
+	margin-right: 8px;
+}
+.prose ol {
+	list-style: decimal;
+	padding-inline-start: 40px;
+	margin-block: 1em;
 }
 textarea {
 	width: 100%;
@@ -99,6 +119,22 @@ input {
 }
 table {
 	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+th,
+td {
+	padding: 12px;
+	text-align: left;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #f4f4f4;
+	font-weight: bold;
+	color: #333;
 }
 img {
 	max-width: 100%;
@@ -113,23 +149,36 @@ code {
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
+	margin-bottom: 2.25em;
 }
 pre > code {
 	all: unset;
 }
+aside {
+	display: flex;
+	gap: 8px;
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	padding: 12px 20px 12px 12px;
+}
+.prose aside p {
+	margin: 0;
+}
 blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
+	margin: 1em 0;
+	font-size: 1.1em;
 }
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
+	margin-block: 0.5em;
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	main {
 		padding: 1em;
