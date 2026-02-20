@@ -5,7 +5,7 @@ import PDFViewer from "../components/PDFViewer";
 
 <Layout
   title="Acerca de mi"
-  description="Lorem ipsum dolor sit amet"
+  description="Ingeniero Mecatrónico y Desarrollador Web Full Stack. Backend y Frontend con PHP, Python, JavaScript y mas."
   pubDate={new Date("Julio 08 2025")}
   heroImage="/blog-placeholder-about.jpg"
 >
@@ -17,7 +17,7 @@ import PDFViewer from "../components/PDFViewer";
     />
 
     <p>
-      Soy ingeniero Mecatrónico con un fuerte enfoque en el desarrollo de
+      Soy ingeniero Mecatronico con un fuerte enfoque en el desarrollo de
       software. Me gusta mi trabajo, y mas alla de verlo como tal, lo disfruto
       como un estilo de vida, programo en el trabajo, en mis tiempos libres,
       cuando sueño y aunque me he preocupado por ello por el momento me dejo
@@ -27,51 +27,56 @@ import PDFViewer from "../components/PDFViewer";
     </p>
 
     <p>
-      He trabajado en los sectores turístico y financiero, destacando por mi
-      capacidad para adaptarme a las necesidades de cada sector y trabajar el
-      software desde el análisis inicial hasta la implementación final. Algunos
-      de los aprendizajes mas destacados que he adquirido son:
+      He trabajado en los sectores turistico, financiero y gobierno, incluyendo
+      proyectos con geotecnologias y sistemas de mapas. Me adapto a lo que se
+      necesite y le entro desde el analisis inicial hasta la implementacion
+      final. Tambien le meto a proyectos personales que van desde scrapers con
+      IA hasta sistemas de rastreo vehicular en tiempo real, porque pues... la
+      curiosidad no se quita con nada.
+    </p>
+
+    <p>
+      Algunos de los aprendizajes mas destacados que he adquirido a lo largo del
+      camino:
     </p>
 
     <ul class="mb-8">
       <li>
-        Backend con PHP, Python y Node.js, utilizando frameworks como Laravel,
-        Flask y Express.js.
+        Backend con PHP, Python y Node.js, usando frameworks como Laravel,
+        Flask, FastAPI y Express.js.
       </li>
       <li>
-        Desarrollo de interfaces de usuario con HTML, CSS y JavaScript,
-        utilizando frameworks como Vue.js y React.js en conjunto con Tailwind,
-        Bootstrap y tambien CSS en general.
+        Frontend con React, Vue.js y Astro, combinados con Tailwind CSS,
+        Bootstrap o CSS puro segun lo que pida el proyecto.
       </li>
       <li>
-        Desarrollo de bases de datos relacionales con MySQL, PostgreSQL y
-        tambien no relacionales con MongoDB.
+        Bases de datos relacionales (MySQL, PostgreSQL) y no relacionales
+        (MongoDB).
       </li>
       <li>
-        Diseño de arquitecturas de software como Clean Architecture y
-        Microservicios.
+        Arquitecturas como Clean Architecture, MVC y microservicios, con
+        principios SOLID.
       </li>
       <li>
-        Integración de servicios externos como APIs, servicios de terceros y
-        servicios de pago.
+        Integracion de APIs externas: pasarelas de pago, hoteleria, mensajeria
+        (WhatsApp Business), conversion de divisas y mas.
       </li>
       <li>
-        Administración de servidores y sistemas operativos Linux y Windows.
+        Administracion de servidores Linux, Docker, Nginx, configuracion de
+        dominios, CORS y despliegues en multiples entornos.
       </li>
+      <li>SEO, web scraping y optimizacion de rendimiento web.</li>
     </ul>
 
     <p>
       En general me trato de mantener actualizado con las nuevas tecnologias y
-      estar en constante aprendizaje para mejorar mis habilidades y
-      conocimientos en el campo de la programacion lo cual logro a traves de
-      estar desarrollando proyectos personales y trabajando en proyectos
-      profesionales, esto ha permitido adquirir habilidades y conocimientos
-      valiosos en el desarrollo de software.
+      estar en constante aprendizaje, ya sea con proyectos personales o en el
+      ambito profesional. Si algo me llama la atencion, le entro, asi de simple.
     </p>
 
     <!-- Importar el componente React -->
     <PDFViewer
-      pdfUrl="/pdf/cv.pdf"
+      pdfUrl="/pdf/cv-jose-tejero-febrero-2026.pdf"
       width={900}
       showControls={true}
       className="mx-auto"
@@ -118,6 +123,13 @@ import PDFViewer from "../components/PDFViewer";
       <div class="badges-container">
         <div class="badge">
           <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+            alt="PHP"
+          />
+          PHP
+        </div>
+        <div class="badge">
+          <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
             alt="Python"
           />
@@ -132,24 +144,31 @@ import PDFViewer from "../components/PDFViewer";
         </div>
         <div class="badge">
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-            alt="PHP"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
           />
-          PHP
+          TypeScript
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="HTML5"
+          />
+          HTML5
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            alt="CSS3"
+          />
+          CSS3
         </div>
       </div>
     </div>
 
     <div class="skills-section">
-      <h2>Frameworks & Librerías</h2>
+      <h2>Backend</h2>
       <div class="badges-container">
-        <div class="badge">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-            alt="Node.js"
-          />
-          Node.js
-        </div>
         <div class="badge">
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
@@ -159,16 +178,98 @@ import PDFViewer from "../components/PDFViewer";
         </div>
         <div class="badge">
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-            alt="React"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+            alt="FastAPI"
           />
-          React
+          FastAPI
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
+            alt="Flask"
+          />
+          Flask
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            alt="Node.js"
+          />
+          Node.js
         </div>
       </div>
     </div>
 
     <div class="skills-section">
-      <h2>Otros Skills</h2>
+      <h2>Frontend</h2>
+      <div class="badges-container">
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            alt="React"
+          />
+          React
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+            alt="Vue.js"
+          />
+          Vue.js
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"
+            alt="Astro"
+          />
+          Astro
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+            alt="Tailwind CSS"
+          />
+          Tailwind CSS
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+            alt="Bootstrap"
+          />
+          Bootstrap
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h2>Bases de Datos</h2>
+      <div class="badges-container">
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            alt="MySQL"
+          />
+          MySQL
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            alt="PostgreSQL"
+          />
+          PostgreSQL
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+            alt="MongoDB"
+          />
+          MongoDB
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h2>DevOps & Infraestructura</h2>
       <div class="badges-container">
         <div class="badge">
           <img
@@ -183,6 +284,13 @@ import PDFViewer from "../components/PDFViewer";
             alt="Docker"
           />
           Docker
+        </div>
+        <div class="badge">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
+            alt="Nginx"
+          />
+          Nginx
         </div>
         <div class="badge">
           <img
