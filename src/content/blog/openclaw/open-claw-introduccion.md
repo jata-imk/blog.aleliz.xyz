@@ -91,3 +91,7 @@ Soporta prácticamente cualquier proveedor de modelos de IA: Anthropic (Claude),
 ## 50+ Integraciones
 
 Desde GitHub y Notion hasta Spotify, WHOOP (métricas de salud), Apple Notes, Apple Reminders, Things 3, Trello, Obsidian, Sentry, y más.
+
+---
+
+**Siguiente artículo:** [Guía: Instalar OpenClaw en un VPS Barato con AlmaLinux 🐧](/blog/openclaw/como-instalar-openclaw-en-una-vps/)
