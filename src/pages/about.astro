@@ -11,7 +11,7 @@ import PDFViewer from "../components/PDFViewer";
 >
   <div>
     <img
-      class="float-left w-[196px] mr-4 mb-0"
+      class="float-left w-[196px] mr-4 mb-2 max-sm:float-none max-sm:w-full max-sm:max-w-[250px] max-sm:mx-auto max-sm:mb-4 max-sm:mr-0"
       src="/fb-profile-img-2021.jpg"
       alt="Imagen de foto polaroid de Jose Tejero con traje"
     />
@@ -114,6 +114,16 @@ import PDFViewer from "../components/PDFViewer";
         height: 20px;
         object-fit: contain;
         border-radius: 0;
+      }
+
+      @media (max-width: 720px) {
+        .badges-container {
+          gap: 0.5rem;
+        }
+        .badge {
+          padding: 0.4rem 0.75rem;
+          font-size: 0.8rem;
+        }
       }
     </style>
     <h1>Mis Skills</h1>

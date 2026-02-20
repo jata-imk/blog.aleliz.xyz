@@ -45,8 +45,8 @@ body {
 	line-height: 1.7;
 }
 main {
-	width: 720px;
-	max-width: calc(100% - 2em);
+	width: 100%;
+	max-width: 800px;
 	margin: auto;
 	padding: 3em 1em;
 }
@@ -182,6 +182,22 @@ hr {
 	}
 	main {
 		padding: 1em;
+	}
+	h1 {
+		font-size: 1.8em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	.prose ul,
+	.prose ol {
+		padding-inline-start: 20px;
+	}
+	table {
+		font-size: 12px;
+	}
+	th, td {
+		padding: 8px;
 	}
 }
 

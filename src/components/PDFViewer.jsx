@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const PDFViewer = ({ 
-  pdfUrl, 
-  width = 800, 
+const PDFViewer = ({
+  pdfUrl,
+  width = 800,
   showControls = true,
-  className = "" 
+  className = ""
 }) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
@@ -20,7 +20,7 @@ const PDFViewer = ({
     const loadPDFJS = async () => {
       try {
         setLoadingStatus('Cargando PDF.js...');
-        
+
         // Verificar si PDF.js ya está cargado
         if (window.pdfjsLib) {
           setLoadingStatus('PDF.js ya disponible');
@@ -31,24 +31,24 @@ const PDFViewer = ({
         // Cargar PDF.js desde CDN
         const script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
-        
+
         script.onload = () => {
           setLoadingStatus('Configurando PDF.js...');
           // Configurar worker
           window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-          
+
           // Pequeño delay para asegurar que todo esté listo
           setTimeout(() => {
             setLoadingStatus('Cargando documento PDF...');
             loadPDF();
           }, 100);
         };
-        
+
         script.onerror = () => {
           setError('Error al cargar PDF.js desde CDN');
           setLoading(false);
         };
-        
+
         document.head.appendChild(script);
       } catch (err) {
         setError('Error al inicializar el visor PDF: ' + err.message);
@@ -65,14 +65,12 @@ const PDFViewer = ({
       setLoading(false);
       return;
     }
-    
+
     try {
       setLoadingStatus('Descargando archivo PDF...');
-      console.log('Intentando cargar PDF desde:', pdfUrl);
-      
+
       const pdf = await window.pdfjsLib.getDocument(pdfUrl).promise;
-      console.log('PDF cargado exitosamente, páginas:', pdf.numPages);
-      
+
       setPdfDoc(pdf);
       setNumPages(pdf.numPages);
       setLoading(false);
@@ -87,11 +85,10 @@ const PDFViewer = ({
     if (!pdfDoc || !canvasRef.current) return;
 
     try {
-      console.log('Renderizando página:', pageNum);
       const page = await pdfDoc.getPage(pageNum);
       const canvas = canvasRef.current;
       const context = canvas.getContext('2d');
-      
+
       const viewport = page.getViewport({ scale });
       canvas.height = viewport.height;
       canvas.width = viewport.width;
@@ -105,7 +102,6 @@ const PDFViewer = ({
       };
 
       await page.render(renderContext).promise;
-      console.log('Página renderizada exitosamente');
     } catch (err) {
       console.error('Error al renderizar la página:', err);
       setError(`Error al renderizar la página: ${err.message}`);
@@ -164,7 +160,7 @@ const PDFViewer = ({
           <p className="text-red-700 font-medium">Error al cargar el PDF</p>
           <p className="text-red-600 text-sm mt-1">{error}</p>
           <p className="text-red-500 text-xs mt-2">URL: {pdfUrl}</p>
-          <button 
+          <button
             onClick={() => window.location.reload()}
             className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
           >
@@ -199,7 +195,7 @@ const PDFViewer = ({
               →
             </button>
           </div>
-          
+
           <div className="flex items-center space-x-2">
             <button
               onClick={zoomOut}
@@ -228,7 +224,7 @@ const PDFViewer = ({
 
       {/* Visor PDF */}
       <div className="overflow-auto max-h-[800px] flex justify-center p-4 bg-gray-100">
-        <canvas 
+        <canvas
           ref={canvasRef}
           className="border border-gray-300 shadow-sm max-w-full bg-white"
           style={{ maxWidth: '100%', height: 'auto' }}
